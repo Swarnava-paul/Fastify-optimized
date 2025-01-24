@@ -6,7 +6,7 @@ const status = require('express-status-monitor')
 const server = express() ;
 
 const {router} = require('./router/route')
-
+server.set('trust proxy', true);
 server.use('/',router)
 server.use(status())
 
